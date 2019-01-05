@@ -43,7 +43,7 @@ This is an example exercise.
 
 ---
 
-## Insert exercise title here
+## Introduction to word vectors
 
 ```yaml
 type: VideoExercise
