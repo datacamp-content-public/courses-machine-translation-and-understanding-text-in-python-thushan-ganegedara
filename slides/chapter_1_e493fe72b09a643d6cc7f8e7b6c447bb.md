@@ -31,10 +31,10 @@ center_content: false
 
 `@part1`
 * numerical representations of words
- * cat = (0.52, 0.02, 0.49)
+ * cat = (0.52, 0.02, 0.49){{1}}
 * captures meaning of words
 
-![Word vectors](https://assets.datacamp.com/production/repositories/4386/datasets/829e90fa86a977034294f7e6fe205f703574cc86/word_vectors_general.png)
+![Word vectors](https://assets.datacamp.com/production/repositories/4386/datasets/829e90fa86a977034294f7e6fe205f703574cc86/word_vectors_general.png){{2}}
 
 
 `@script`
@@ -61,14 +61,14 @@ Doesn't capture the any concepts
 
 
 `@part2`
-When word vectors are used,
-* cat = (0.52, 0.02, 0.49)
-* dog = (0.49, -0.05, 0.4)
-* volcano = (1.09, -0.45, -0.87)
+When word vectors are used,{{1}}
+* cat = (0.52, 0.02, 0.49){{1}}
+* dog = (0.49, -0.05, 0.4){{1}}
+* volcano = (1.09, -0.45, -0.87){{1}}
 
-Cat is very similar to a dog, but very different from a volcano
+Cat is very similar to a dog, but very different from a volcano{{2}}
 
-![Word vector representation](https://assets.datacamp.com/production/repositories/4386/datasets/959912f00dd79ae4e8321ef56863ce3ab98b6635/ch1_wordvec.png)
+![Word vector representation](https://assets.datacamp.com/production/repositories/4386/datasets/959912f00dd79ae4e8321ef56863ce3ab98b6635/ch1_wordvec.png){{2}}
 
 
 `@script`
@@ -85,6 +85,11 @@ key: "8e4a99ea2a"
 
 `@part1`
 > You shall know a word by the company it keeps - J.R. Firth
+
+
+John is a stubborn boy. His pervicacious nature always gets him in trouble{{1}}
+
+* What does "pervicacious" mean?{{2}}
 
 
 `@script`
