@@ -17,7 +17,7 @@ title: Data Scientist
 
 
 `@script`
-In this lesson, we will be focusing on general ideas around word vectors; a powerful numerical representation of words.
+Hi, in this lesson, we will be exploring some general ideas around word vectors; a powerful numerical representation of words that is ubiquitously used for natural language processing tasks.
 
 
 ---
@@ -40,15 +40,13 @@ center_content: false
 `@script`
 What are word vectors?
 
-As mentioned earlier, word vectors are powerful numerical representations of words. 
+As mentioned earlier, word vectors are numerical representations of words. For example, the word vector of the word cat might look like this; a fixed length vector of real numbers.
 
 More importantly, word vectors preserve the semantics of words as the words are mapped to the vector space.
  
 Take a look at the image below. If you imagine a 3 dimensional space to which the words are mapped, the word vectors might be positioned as follows.
 
-The word cat will be very close to dog, however far away from the word volcano. 
-
-This is a very desirable property to have when trying to solve more complex problems. And almost all the NLP tasks like text classification and machine translation use word vectors as a basis to build the models, as we will see later.
+The word cat will be very close to the word dog, however far away from the word volcano.
 
 
 ---
@@ -82,23 +80,19 @@ Cat is very similar to a dog, but very different from a volcano{{3}}
 
 
 `@script`
-Now you know what word vectors are at a high level. But why do we need such powerful representations of words?
+Now you know what word vectors capture. But why do we need such powerful representations of words?
 
-Can't we just use a naive representation?
+Why not use a naive representation?
 
-For example, let us represent the words cat and dog as,
+For example, let us represent the words cat, dog and volcano as follows, where each number corresponds to the alphabetical index of each letter in the word, such as 3 for the third letter c, 1 for the first letter a, and so on.
 
-cat = (3, 1, 20)
-dog = (4, 15, 7)
-where each number corresponds to the index of each letter in the word, such as 3 for the third letter c, 1 for the first letter a, and so on.
+This representation does not help computers to infer additional information given the data.
 
-Of course we can use this representation! But this representation does not help computers to infer additional information given the data.
+Now think about the following representation, where the words cat, dog and volcano are represented with word vectors.
 
-Now think about the following representation, where the words cat, dog and volcano are represented as vectors of real numbers, and the word cat is positioned very close to the word dog.
+This allows the computer to understand the concepts or semantics of the words. Now the computer knows, cat is very similar to a dog but very different from a volcano. 
 
-This allows the computer to understand the concept or semantics of the word "cat". In other words, now the computer knows, cat is very similar to a dog but very different from a volcano.
-
-As you can imagine, such a representation is very powerful and enables us to solve very complex NLP problems like machine translation much more effectively. This is because the behavior of the ML models will be tightly coupled with the meanings of the words it is looking at. For example, when the model is looking at similar words, the ML model will only experience a slight change in the input, whereas if it sees two unrelated words, the model will perceive a larger change. 
+Such a representation is very powerful and enables us to solve very complex NLP problems much more effectively. This is because the behaviour of the machine learning model will be tightly coupled with the meanings of the words. For example, when the model is looking at similar words, the model will experience only a slight change in the input, and vice-versa. 
 
 We now know the general concept behind word vectors and why they are important. Now let us see how word vectors can be derived.
 
@@ -122,21 +116,23 @@ John is a stubborn boy. His pervicacious nature always gets him in trouble{{2}}
 
 
 `@script`
-All word vector algorithms developed to this day rely on a fundamental characteristic of language. That is, the meaning of a given word can be inferred by looking at its context. This was famously uttered by J.R. Firth a British linguist in 1950s as,
+All word vector algorithms rely on a fundamental characteristic of language, which is captured in the following statement. 
 
 "You shall know a word by the company it keeps"
+
+This was uttered by J.R. Firth a famous British linguist.
 
 Let us put this statement to test. Can the meaning of a word be derived from its context? Consider the following sentence.
 
 John is a stubborn boy. His pervicacious nature always gets him in trouble.
 
-Assume someone asked you what "pervicacious" means? Unless you know the meaning, you would automatically start looking at the context words. You will see that words like "stubborn" and "trouble" are present in the surrounding. This information alone is enough to conclude that "pervicacious" means "being stubborn".
+Assume someone asked you what "pervicacious" means? Unless you know the meaning, you would automatically start looking at the context words of the word "pervicacious". You will see that words like "stubborn" and "trouble" are present in the surrounding. Which tells you that "pervicacious" means "being stubborn".
 
-Word vector algorithms exactly uses this information. For example, in order to learn word vectors, the skip-gram algorithm tries to predict all surrounding words given a word, using a neural network. We will look at the details soon.
+Word vector algorithms exactly uses this information. For example, the skip-gram algorithm tries to predict all surrounding words of a given word, using a neural network.
 
 
 ---
-## Final Slide
+## Let's practice!
 
 ```yaml
 type: "FinalSlide"
@@ -144,5 +140,5 @@ key: "238fd42a15"
 ```
 
 `@script`
-In this lesson you learnt what word vectors are, why learning word vectors is important, and the underpinning idea on which word vector algorithms are built. In the next lesson we will learn the details of one of the popular word vector algorithms, known as skip-gram.
+In this lesson you learnt why word vectors are important, and the underpinning idea on which word vector algorithms are built. In the next lesson we will learn about two popular word vector algorithms, known as skip-gram and continuous bag-of-words.
 
