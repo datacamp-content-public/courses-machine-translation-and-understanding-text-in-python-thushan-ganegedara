@@ -53,3 +53,16 @@ xp: 50
 
 `@projector_key`
 e493fe72b09a643d6cc7f8e7b6c447bb
+
+---
+
+## Skip-gram and CBOW algorithms
+
+```yaml
+type: VideoExercise
+key: 5b0f2c66fd
+xp: 50
+```
+
+`@projector_key`
+02ca9345b662923d873a71500884bea9
