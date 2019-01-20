@@ -42,6 +42,7 @@ key: "a1cf58d984"
 ```yaml
 type: "TwoColumns"
 key: "3b12b965ca"
+center_content: false
 ```
 
 `@part1`
@@ -52,8 +53,7 @@ key: "3b12b965ca"
 ```
 encoder_inputs = Input(
     shape=(en_seq_len, en_vocab), 
-    name='encoder_inputs'
-)
+    name='encoder_inputs')
 
 encoder_lstm = LSTM(
     latent_dim, return_state=True, 
