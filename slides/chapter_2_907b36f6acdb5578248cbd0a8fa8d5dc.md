@@ -50,7 +50,7 @@ center_content: false
 ```
 
 `@part1`
-![Encoder](https://assets.datacamp.com/production/repositories/4386/datasets/5d8dc8063d9e5826e9f02c8cade7148187b70845/encoder.svg)
+![Encoder](https://assets.datacamp.com/production/repositories/4386/datasets/3167a07b67e13b69b5a71bf80fdcbbd159daa3bb/encoder.svg)
 
 
 `@part2`
@@ -131,18 +131,55 @@ First you define a decoder input similar to the encoder input, however the shape
 ## Defining the Final Model
 
 ```yaml
-type: "FullCodeSlide"
-key: "a1b03662fa"
+type: "TwoColumns"
+key: "e39cfbf50a"
 ```
 
 `@part1`
+![Encoder decoder model](https://assets.datacamp.com/production/repositories/4386/datasets/1d8e11ffdf7357d7fbd2e00ffd4468bf220896a8/encoder_decoder_model.svg)
+
+
+`@part2`
 ```
-model = Model([encoder_inputs, decoder_inputs], decoder_outputs)
+model = Model(
+    [encoder_inputs, decoder_inputs], 
+    decoder_outputs
+)
 ```{{1}}
 
 
 `@script`
 Finally you can define the full model. To define a model with the functional API you use the Model object and define inputs and outputs of the model. At runtime, you will feed in the actual data. Inputs are source sentences and target sentences, where the output is the target sentences with words offset by 1.
+
+
+---
+## Insert title here...
+
+```yaml
+type: "FullSlide"
+key: "f0769c0596"
+```
+
+`@part1`
+axis.title
+
+label of axes (element_text; inherits from text)
+
+axis.title.x
+
+x axis label (element_text; inherits from axis.title)
+
+axis.title.x.top
+
+x axis label on top axis (element_text; inherits from axis.title.x)
+
+axis.title.x.bottom
+
+x axis label on bottom axis (element_text; inherits from axis.title.x)
+
+
+`@script`
+
 
 
 ---
